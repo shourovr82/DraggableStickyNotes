@@ -3,6 +3,7 @@
   width: 90%;
   position: relative;
   align-items: center;
+  transition: 0.2s;
 }
 
 .input-box {
@@ -17,4 +18,29 @@
 
 .input-box:focus {
   box-shadow: 0 0 10px 10000px rgba(4, 0, 24, 0.795);
+}
+
+.input-submit {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin: 12px;
+  border-radius: 50px;
+  right: 0;
+  border: none;
+  font-size: 15px;
+  background-color: saddlebrown;
+  color: white;
+  transition: 0.2s all;
+  box-shadow: 0 0 10px black;
+}
+
+.input-submit:hover {
+  background-color: brown;
+  cursor: pointer
+}
+
+.input-submit:active {
+  transform: scale(0.8);
+  box-shadow: 0 0 5px black;
 }
