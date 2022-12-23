@@ -1,9 +1,13 @@
 .input {
   display: flex;
-  width: 90%;
+  width: 100%;
   position: relative;
   align-items: center;
   transition: 0.2s;
+}
+
+.input-main {
+  width: 70%;
 }
 
 .input-box {

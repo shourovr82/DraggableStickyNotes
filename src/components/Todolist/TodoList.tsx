@@ -1,5 +1,6 @@
 import React from 'react';
 import { Todo } from '../../boolHoooks';
+import SingleTodo from '../singleTodo/SingleTodo';
 import './todolist.css'
 
 interface Props {
@@ -12,7 +13,9 @@ const TodoList: React.FC<Props> = ({ todos, setTodos }: Props) => {
     <div className='todos'>
       {
         todos.map(todo => (
-          <li>{todo.todo}</li>
+          <SingleTodo todo={todo} key={todo.id} todos={todos}
+            setTodos={setTodos}
+          />
         ))
       }
     </div>

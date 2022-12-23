@@ -14,7 +14,7 @@ const InputField: React.FC<Props> = ({ todo, setTodo, handleAdd }: Props) => {
 
 
   return (
-    <div>
+    <div className='input-main'>
       <form
         onSubmit={e => {
           handleAdd(e)
