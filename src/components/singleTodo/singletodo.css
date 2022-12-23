@@ -37,8 +37,18 @@
   font-size: 20px;
   border: none;
   padding: 5px;
-  text-align: end;
   color: white;
+}
+
+.input-edit-text {
+  padding: 8px;
+  box-shadow: inset 1px 3px 10px 0px #444;
+  border-radius: 5px;
+}
+
+.input-edit-text:focus {
+  outline: none;
+
 }
 
 
