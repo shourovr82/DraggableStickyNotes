@@ -14,3 +14,16 @@
   border: none;
   font-size: 20px;
 }
+
+.dragactive {
+  background-color: rgb(53, 185, 141);
+
+}
+
+.dragcomplete {
+  background-color: rgb(10, 53, 10);
+}
+
+.drag {
+  box-shadow: 0 0 20px black;
+}

@@ -61,6 +61,7 @@
   padding: 15px;
   border-radius: 5px;
   background-color: aquamarine;
+  transition: .5s all;
 }
 
 

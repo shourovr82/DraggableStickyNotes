@@ -18,10 +18,12 @@ const TodoList: React.FC<Props> = ({ todos,
   return (
     <div className='container-list'>
 
-      <Droppable droppableId='todosList'>
+      <Droppable droppableId='TodosList'>
         {
-          (provided) => (
-            <div className='todos' ref={provided.innerRef} {...provided.droppableProps}>
+          (provided, snapshot) => (
+            <div
+              className={`todos ${snapshot.isDraggingOver ? 'dragactive' : ''}`}
+              ref={provided.innerRef} {...provided.droppableProps}>
               <h4 className='todo-task-title'>
                 Active Tasks
               </h4>
@@ -46,19 +48,25 @@ const TodoList: React.FC<Props> = ({ todos,
 
       <Droppable droppableId='todosRemove'>
         {
-          (provided) => (
-            <div className='todos todos-complete remove'
+          (provided, snapshot) => (
+            <div
+
+              className={`todos todos-complete remove' ${snapshot.isDraggingOver ? 'dragcomplete' : ''}`}
+
               ref={provided.innerRef} {...provided.droppableProps}>
               <h4 className='todo-task-title'>
                 Completed Tasks
               </h4>
               {
-                completedTodos.map((todo, index) => (
-                  <SingleTodo index={index} todo={todo} key={todo.id} todos={completedTodos}
+                completedTodos?.map((todo, index) => (
+                  <SingleTodo
+                    index={index}
+                    todo={todo}
+                    key={todo.id}
+                    todos={completedTodos}
                     setTodos={setCompletedTodos}
                   />
-                ))
-              }
+                ))}
               {provided.placeholder}
             </div>
           )
